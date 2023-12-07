@@ -1,0 +1,23 @@
+# Criando uma página com React e JSX
+
+## Introdução
+- Exercício para recriar uma página HTML utilizando React e JSX
+- Objetivo é treinar o uso de React e JSX
+
+## Passo a passo
+- Criar um novo projeto React com Vite
+- Remover conteúdo inicial do projeto
+- Reproduzir a página HTML fornecida utilizando JSX
+- Imagem da página a ser recriada disponibilizada
+- Texto complementar com imagem do resultado final
+- Dica: colocar imagem na pasta `public` para ficar disponível via URL
+
+## Considerações
+- Exercício simples para praticar React e JSX
+- Foco em recriar a estrutura da página HTML com JSX
+- Imagem pode ser ampliada para ver os textos e detalhes
+
+## Conclusão
+- Bom treino de React e JSX
+- Preparação para exercícios mais complexos
+- Solução disponibilizada em breve
