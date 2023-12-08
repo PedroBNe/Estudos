@@ -1,10 +1,14 @@
 import Card from "./components/Card"
 import styles from "./App.module.css"
+import { Fragment } from "react"
 
 export default function App(){
   return (
-    <div className={styles.App}>
+    //<Fragment className={styles.App}> Hoje o fragment pode ser substituido pelo ->
+    <>
+      <h1>Ex 2</h1>
       <Card />
-    </div>
+    </>
+    //</Fragment>
   )
 }
