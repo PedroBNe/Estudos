@@ -7,7 +7,9 @@ export default function App(){
     //<Fragment className={styles.App}> Hoje o fragment pode ser substituido pelo ->
     <>
       <h1>Ex 2</h1>
-      <Card />
+      <Card title="Pôster: 1" />
+      <Card title="Pôster: 2" />
+      <Card title="Pôster: 3" />
     </>
     //</Fragment>
   )
