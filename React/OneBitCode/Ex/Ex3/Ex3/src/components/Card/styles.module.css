@@ -1,0 +1,14 @@
+.Card{
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  padding: 30px;
+  justify-items: center;
+  gap: 5px;
+}
+
+img{
+  width: 50%;
+}

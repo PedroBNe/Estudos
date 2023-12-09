@@ -1,0 +1,8 @@
+.App{
+  display: grid;
+  background-color: rgb(18, 219, 255);
+  min-height: 100vh;
+  place-content: center;
+  text-align: center;
+  justify-items: center
+}
