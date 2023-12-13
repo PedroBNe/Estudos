@@ -1,18 +1,35 @@
+import { useState } from 'react';
 import './App.css'
-import Button from './components/Button'
-import ButtonCopy from './components/ButtonCopy';
-import useSenha from './hooks/useSenha'
 
 function App() {
 
-  const senhaController = useSenha();
+  const [password, setPassword] = useState("")
+  const [copy, setCopy] = useState("Copiar")
+
+  function generate(){
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const length = 12
+    let newPassword = ""
+    for (let i = 0; i < length; i++) {
+      const position = Math.floor(Math.random() * characters.length)
+      newPassword += characters[position]
+    }
+    setPassword(newPassword)
+
+    setCopy("Copiar")
+  }
+
+  function copyToClipboard(){
+    window.navigator.clipboard.writeText(password)
+    setCopy("Copiado")
+  }
 
   return (
     <div className='app'>
       <h1>Gerador de senhas</h1>
-      <Button name={"Gerar"} onClick={senhaController.gerar} />
-      <ButtonCopy senha={senhaController.senha} />
-      <p>{senhaController.senha}</p>
+      <button onClick={generate}>Gerar!</button>
+      <button onClick={copyToClipboard}>{copy}</button>
+      <p>{password}</p>
     </div>
   )
 }
