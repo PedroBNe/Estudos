@@ -1,14 +1,16 @@
+import { useState } from "react"
 import Button from "../Button"
 import Title from "../Title"
 import Section from "./Section"
 import styles from "./styles.module.css"
 
-function handleClick(ev){
-  console.log(ev)
-  alert("teste")
-}
-
 export default function Card({image, name, bio, number, email, git, link, twi}){
+  const [followText, setFollowText] = useState("Follow")
+
+  function handleClick(ev){
+    alert("teste")
+    setFollowText("Following...")
+  }
 
   return (
     <div className={styles.Card}>
@@ -18,7 +20,7 @@ export default function Card({image, name, bio, number, email, git, link, twi}){
         <button
         className={styles.followButton}
           onClick={handleClick}
-        >Seguir</button>
+        >{followText}</button>
       </Title>
       <Section>{bio}</Section>
       <Section>{number}</Section>
