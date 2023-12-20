@@ -9,8 +9,8 @@ export default function ComentForm(){
 
   return (
     <form onSubmit={enviar}>
-      <Input />
-      <Input />
+      <Input id="email" label="Email" value={title} setValue={setTitle} />
+      <Input id="title" label="Comentário" value={title} setValue={setTitle} />
       <button type="submit">Enviar Comentário</button>
     </form>
   )
