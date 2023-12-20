@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function coments(){
+export default function useComents(){
   const [coments, setComents] = useState(() => {
     const storedComents = localStorage.getItem('coments');
     if(!storedComents) return []
@@ -9,19 +9,19 @@ export default function coments(){
 
   const addComent = ({email, coment}) => {
     const id = Math.floor(Math.random() * 1000000)
-    const coment = { id, email, coment }
+    const comentText = { id, email, coment }
     setComents(state => {
-      const newComent = [...state, coment]
-      localStorage.setItem('coments', JSON.stringify(newComent))
-      return newComent
+      const newState = [...state, comentText]
+      localStorage.setItem('coments', JSON.stringify(newState))
+      return newState
     })
   }
 
   const removeComent = (id) => {
     setComents(state => {
-      const newComent = state.filter(coment => coment.id !== id)
-      localStorage.setItem('coments', JSON.stringify(newComent))
-      return newComent
+      const newState = state.filter(comentText => comentText.id !== id)
+      localStorage.setItem('coments', JSON.stringify(newState))
+      return newState
     })
   }
 
